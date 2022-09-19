@@ -1,17 +1,18 @@
 # Import required modules nad json
-import requests, json
+import requests
+import json
 
 # my api_key on openweathermap
-api_key = "615231c07d2eab0f59f036af943fbcc6"
+myApi_key= "615231c07d2eab0f59f036af943fbcc6"
 
 # base_url for openweathermap
-base_url = "https://api.openweathermap.org/data/2.5/weather?"
+urlCord= "https://api.openweathermap.org/data/2.5/weather?"
 
 # User enter city name here
 city_name = input ("Enter the city name"+ "")
 
 # New url based on the citys name 
-cityurl = base_url + "appid=" + api_key + "&q=" + city_name
+cityurl = urlCord + "appid=" + myApi_key+ "&q=" + city_name
 
 # Here we get back the response for our request
 response = requests.get(cityurl)
@@ -28,7 +29,7 @@ lats = str(lat)
 lons = str(lon)
 
 # complete url address
-url = base_url + "lat=" + lats + "&lon=" + lons +"&appid="+api_key
+url = urlCord + "lat=" + lats + "&lon=" + lons +"&appid="+ myApi_key
 
 # get method of requests  
 # return response object
@@ -55,4 +56,5 @@ print ("Current temprtur     :"  + " " + str(tempCelsius))
 print ("Feels_lik as         :"  + " " + str(feels_likeCelsius))
 print ("Humidity is          :"  + " " + str(humidity))
 print ("Current wind speed   :"  + " " + str(wind))
+
 
