@@ -31,7 +31,7 @@ lons = str(lon)
 # complete url address
 url = urlCord + "lat=" + lats + "&lon=" + lons +"&appid="+ myApi_key
 
-# get method of requests  
+# get method of requests    
 # return response object
 response = requests.get(url)
 json_text = response.json() 
