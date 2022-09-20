@@ -12,10 +12,7 @@ make a request to a web page and print the response text.
 Convert to json string ( Used to convert response to json text) .
 
 ## Technologies
-Project is created with:
-*. Visual Studio Code (version 1.71)
-
-*. pip 22.2.2
+visual Studio Code (version 1.71) used for testing and compiling the project
 
 ## Setup
 To run this program:
